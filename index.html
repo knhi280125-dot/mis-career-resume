@@ -7,7 +7,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 <style>
-body { background-color: #f8f9fa; font-family: "Microsoft JhengHei", sans-serif; line-height: 1.8; }
+body { background-color: #f8f9fa; font-family: "Microsoft JhengHei", sans-serif; line-height: 1.8; scroll-behavior: smooth; }
 .navbar { background: #1a1a1a !important; padding: 15px 0; }
 .hero-section {
 background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
@@ -17,9 +17,16 @@ color: white; padding: 100px 0; border-bottom: 5px solid #f39c12;
 width: 250px; height: 250px; border-radius: 50%; object-fit: cover;
 border: 8px solid rgba(255,255,255,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
-.card { border: none; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 30px; }
+.card { border: none; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 30px; transition: 0.3s; }
+.card:hover { transform: translateY(-5px); }
 
-/* Clickable Title for Tech Skills */
+/* New section style for Personality */
+.personality-card {
+background: linear-gradient(135deg, #fffcf5 0%, #fff 100%);
+border: 2px solid #fdf2e2;
+}
+.personality-icon { font-size: 2.5rem; color: #e67e22; margin-bottom: 15px; }
+
 .clickable-tech-header {
 cursor: pointer; background: #fff; padding: 20px; border-radius: 15px;
 border-left: 6px solid #f39c12; transition: 0.3s;
@@ -47,10 +54,11 @@ footer { background: #1a1a1a; color: white; padding: 60px 0; margin-top: 50px; }
 <div class="container">
 <a class="navbar-brand fw-bold fs-3" href="#">阮慶兒 Julia</a>
 <div class="navbar-nav ms-auto">
-<a class="nav-link" href="#about">關於我</a>
-<a class="nav-link" href="#skills">專業技術</a>
-<a class="nav-link" href="#mis-section">MIS工作分析</a>
-<a class="nav-link" href="#future">未來規劃</a>
+<a class="nav-link" href="#about">Về tôi</a>
+<a class="nav-link" href="#skills">Kỹ thuật</a>
+<a class="nav-link" href="#personality">Tính cách</a>
+<a class="nav-link" href="#mis-section">MIS</a>
+<a class="nav-link" href="#future">Tương lai</a>
 </div>
 </div>
 </nav>
@@ -62,10 +70,10 @@ footer { background: #1a1a1a; color: white; padding: 60px 0; margin-top: 50px; }
 <h1 class="display-3 fw-bold mb-3">阮慶兒</h1>
 <h2 class="h3 mb-4 opacity-75">Nguyen Khanh Nhi (Julia)</h2>
 <p class="fs-5 mb-2"><i class="bi bi-mortarboard-fill"></i> 靜宜大學 資訊管理學系 二年級</p>
-<p class="fs-5"><i class="bi bi-geo-alt-fill"></i> 我的目標：畢業後留在台灣定居與工作</p>
+<p class="fs-5"><i class="bi bi-geo-alt-fill"></i> Nguồn gốc: Việt Nam | Mục tiêu: Deeply rooted in Taiwan</p>
 </div>
 <div class="col-md-5 text-center mt-5 mt-md-0">
-<img src="https://via.placeholder.com/250" alt="阮慶兒" class="hero-image">
+<img src="data:image/png;base64,...(DỮ LIỆU_ẢNH_CỦA_NHI_MÃ_HÓA_BASE64)..." alt="阮慶兒" class="hero-image">
 </div>
 </div>
 </div>
@@ -74,35 +82,64 @@ footer { background: #1a1a1a; color: white; padding: 60px 0; margin-top: 50px; }
 <div class="container my-5">
 <section id="about" class="mb-5">
 <div class="card p-4 p-md-5">
-<h3 class="section-title border-left-0 px-0">自我介紹</h3>
-<p>您好！我是阮慶兒，來自越南。目前在台灣靜宜大學攻讀資訊管理。我是一個理性的開發者，也是一個感性的創作者。</p>
-<p><strong>我的文學成就：</strong> 高中時期我曾獲得<strong>全省文學競賽二等獎</strong>，這份經歷讓我擁有了極強的細節觀察力。我熱愛寫小說，對我來說，編寫程式就像是創作小說，每一行代碼都是構建系統故事的精華。</p>
-<p><strong>我的留台夢想：</strong> 我非常喜愛台灣的生活環境，未來的目標是畢業後留在台灣，將我的資訊專業貢獻於這片土地。</p>
+<h3 class="section-title border-left-0 px-0 fw-bold" style="color: #1e3c72;">Giới thiệu bản thân</h3>
+<p class="lead">Chào mọi người! Mình là Nguyễn Khánh Nhi, một cô gái Việt Nam đang trên hành trình khám phá thế giới MIS tại Đài Loan.</p>
+<p><strong>Nguồn cảm hứng văn chương:</strong> Cấp 3 mình từng đoạt giải <strong>Nhì Văn cấp tỉnh</strong>. Niềm đam mê văn chương giúp mình có một tâm hồn tinh tế, luôn chú ý đến từng chi tiết nhỏ. Đối với mình, việc viết code cũng giống như sáng tác một câu chuyện - mỗi dòng code là một chương, mỗi chức năng là một nhân vật,交織 thành một hệ thống thông tin sống động và hữu ích.</p>
+<p><strong>Ước mơ định cư:</strong> Mình yêu mến Đài Loan và đặt mục tiêu tốt nghiệp sẽ ở lại làm việc, sinh sống, và đóng góp sức mình cho ngành IT nơi đây.</p>
+</div>
+</section>
+
+<section id="personality" class="mb-5 py-4">
+<div class="container px-0">
+<h3 class="section-title border-left-0 px-0 fw-bold text-center mb-5" style="color: #1e3c72;">✨ 性格特質與優勢：S (社會型) x A (藝術型)</h3>
+<div class="row g-4">
+<div class="col-md-6 col-lg-4">
+<div class="card personality-card p-4 h-100 text-center">
+<i class="bi bi-heart-fill personality-icon"></i>
+<h5 class="fw-bold mb-3">S (社會型)：溫暖同理</h5>
+<p class="text-muted">我擁有極強的同理心，樂於傾聽與幫助他人。喜歡與人接觸，能敏銳察覺他人需求，在團隊中能營造和諧氣氛。</p>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="card personality-card p-4 h-100 text-center">
+<i class="bi bi-palette-fill personality-icon"></i>
+<h5 class="fw-bold mb-3">A (藝術型)：創意無限</h5>
+<p class="text-muted">我的想像力豐富，不喜歡受束縛。喜歡用文字或設計表達創意思考。獲得文學競賽二等獎也證明了我在文字創作上的藝術天分。</p>
+</div>
+</div>
+<div class="col-md-12 col-lg-4">
+<div class="card personality-card p-4 h-100 text-center">
+<i class="bi bi-feather personality-icon"></i>
+<h5 class="fw-bold mb-3">感性與理性的交融</h5>
+<p class="text-muted">文學訓練讓我具備高度細節觀察力。這讓我在編寫程式時更細心。我的目標是將「創意」與「邏輯」結合，讓技術也能具備溫情。</p>
+</div>
+</div>
+</div>
 </div>
 </section>
 
 <section id="skills" class="mb-5">
 <div class="card p-0 overflow-hidden">
 <div class="clickable-tech-header" data-bs-toggle="collapse" data-bs-target="#techDetails">
-<h3 class="m-0"><i class="bi bi-cpu"></i> 資訊專業技術 <span class="fs-6 text-muted ms-2">(點擊標題展開/收合詳細內容)</span></h3>
+<h3 class="m-0"><i class="bi bi-cpu"></i> 資訊專業技術 <span class="fs-6 text-muted ms-2">(点擊展開詳細內容)</span></h3>
 </div>
 <div class="collapse show" id="techDetails">
 <div class="p-4 bg-white">
 <div class="row">
 <div class="col-md-6 mb-3">
-<h6 class="fw-bold text-primary">後端與資料庫：</h6>
-<span class="skill-tag">Python (Flask Framework)</span>
+<h6 class="fw-bold text-primary">Hậu backend & Database:</h6>
+<span class="skill-tag">Python (Flask)</span>
 <span class="skill-tag">Firebase NoSQL Firestore</span>
-<span class="skill-tag">RESTful API 串接實作</span>
+<span class="skill-tag">RESTful API</span>
 </div>
 <div class="col-md-6 mb-3">
-<h6 class="fw-bold text-primary">前端與辦公工具：</h6>
+<h6 class="fw-bold text-primary">Frontend & Office Tools:</h6>
 <span class="skill-tag">HTML5 / CSS3 / Bootstrap</span>
 <span class="skill-tag">Microsoft Word & Excel</span>
-<span class="skill-tag">VS Code 開發 / Git 版本控制 / GitHub</span>
+<span class="skill-tag">VS Code / Git & GitHub</span>
 </div>
 </div>
-<p class="mt-3 text-muted">我具備獨立開發完整的 Web 應用的能力，並能熟練運用辦公軟體進行資料分析與報表撰寫。</p>
+<p class="mt-3 text-muted">Mình có khả năng độc lập phát triển các ứng dụng Web hoàn chỉnh và sử dụng thành thạo phần mềm văn phòng để phân tích dữ liệu và lập báo cáo.</p>
 </div>
 </div>
 </div>
@@ -110,20 +147,18 @@ footer { background: #1a1a1a; color: white; padding: 60px 0; margin-top: 50px; }
 
 <section id="future" class="mb-5">
 <div class="card p-4">
-<h3 class="section-title border-left-0 px-0">我的未來兩年規劃：邁向專業之路</h3>
+<h3 class="section-title border-left-0 px-0 fw-bold" style="color: #1e3c72;">未來規劃：深耕台灣</h3>
 <ul>
-<li class="mb-3"><strong>2026-2027：知識積累期</strong><br>
-我計畫深入研究雲端技術架构，目標取得 AWS 雲端相關認證，並積極參與校園技術競賽實踐所學。</li>
-<li><strong>2027-2028：實務成長期</strong><br>
-我計畫申請在台企業實習，累積職場經驗。同時完成畢業專題，為畢業後定居台灣做足準備。</li>
+<li class="mb-3"><strong>短期目標：</strong> 持續提升專業技術，兩年內考取 AWS 或 Google Cloud 相關認證。</li>
+<li><strong>長期願景：</strong> 畢業後在台灣 IT 企業任職，發揮跨文化與技術優勢，實現在台定居夢想。</li>
 </ul>
 </div>
 </section>
 
 <section id="mis-section" class="mb-5">
 <div class="card p-4">
-<h3 class="section-title border-left-0 px-0">我的 MIS 工作分析專案</h3>
-<p class="text-muted small">以下內容直接載入自我原本的專案頁面：</p>
+<h3 class="section-title border-left-0 px-0 fw-bold" style="color: #1e3c72;">MIS 工作分析專案內容</h3>
+<p class="text-muted small">Dưới đây là nội dung chi tiết được nhúng trực tiếp từ trang dự án MIS cũ của mình:</p>
 <div class="ratio ratio-16x9 shadow-sm rounded-4 overflow-hidden" style="border: 1px solid #ddd;">
 <iframe src="https://work1115.vercel.app/generic.html" title="MIS Analysis"></iframe>
 </div>
@@ -132,29 +167,27 @@ footer { background: #1a1a1a; color: white; padding: 60px 0; margin-top: 50px; }
 
 <section id="interests">
 <div class="card p-4">
-<h3 class="section-title text-center border-0 mb-4">✨ 我的生活愛好與成長規劃</h3>
-<p class="text-muted text-center mb-4">點擊標籤查看我的「兩年發展規劃」</p>
-
-<button class="interest-bar bg-novel" data-bs-toggle="modal" data-bs-target="#m1">小說創作與深度閱讀計畫 📖</button>
-<button class="interest-bar bg-taiwan" data-bs-toggle="modal" data-bs-target="#m2">台灣旅遊探索與影像誌 ✈️</button>
-<button class="interest-bar bg-music" data-bs-toggle="modal" data-bs-target="#m3">音樂藝術涵養與美感提升 🎵</button>
-<button class="interest-bar bg-team" data-bs-toggle="modal" data-bs-target="#m4">團隊協作溝通能力培養 🤝</button>
+<h3 class="section-title border-0 text-center fw-bold mb-4" style="color: #1e3c72;">✨ 我的生活愛好與成長規劃</h3>
+<button class="interest-bar bg-novel" data-bs-toggle="modal" data-bs-target="#m1">Novel Writing & Reading 📖</button>
+<button class="interest-bar bg-taiwan" data-bs-toggle="modal" data-bs-target="#m2">Taiwan Exploration ✈️</button>
+<button class="interest-bar bg-music" data-bs-toggle="modal" data-bs-target="#m3">Music & Art Appreciation 🎵</button>
+<button class="interest-bar bg-team" data-bs-toggle="modal" data-bs-target="#m4">Teamwork & Leadership 🤝</button>
 </div>
 </section>
 </div>
 
-<div class="modal fade" id="m1" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 shadow"><div class="modal-header bg-novel text-white border-0"><h5>我的創作計畫</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body">我想利用我在文學上的榮譽背景，兩年內計畫完成一部以台灣留學生活為背景的中文中篇小說，並提升自身的專業中文寫作水平。</div></div></div></div>
-<div class="modal fade" id="m2" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 shadow"><div class="modal-header bg-taiwan text-white border-0"><h5>我的旅遊計畫</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body">我想走遍台灣各大城市，並用網頁與影像技術建立一個個人旅遊影音誌，記錄我在台生活的每一天。</div></div></div></div>
-<div class="modal fade" id="m3" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 shadow"><div class="modal-header bg-music text-white border-0"><h5>我的美感提升</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body">我想透過藝術欣赏與音樂提升對數位產品 UI/UX 設計的美感判斷力，讓技術也具備溫情。</div></div></div></div>
-<div class="modal fade" id="m4" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 shadow"><div class="modal-header bg-team text-white border-0"><h5>我的團隊溝通</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body">我想積極在系上專案中擔任協調者角色，學習運用 Git 開發流程進行高效的團隊溝通。</div></div></div></div>
+<div class="modal fade" id="m1" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content border-0"><div class="modal-header bg-novel text-white"><h5>Novel Writing & Reading Plan (2026-2028)</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body p-4"><ul><li><strong>第一年：知識積累期</strong><br>每月閱讀一本專業資訊管理書籍與兩本中英文文學作品，強化跨域思維。</li><li><strong>第二年：作品產出期</strong><br>利用我的文學獎背景，完成一部以台灣生活為背景的中文中篇小說，並應用 HTML 排版技術建立電子書。</li></ul></div></div></div></div>
+<div class="modal fade" id="m2" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content border-0"><div class="modal-header bg-taiwan text-white"><h5>Taiwan Exploration Plan (2026-2028)</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body p-4"><ul><li><strong>行動一：全縣市探索</strong><br>在畢業前走遍台灣各縣市，並用影像記錄台灣的風土人情。</li><li><strong>行動二：影像日誌建立</strong><br>學習專業攝影技術，建立一個個人旅遊影音誌網頁作品集。</li></ul></div></div></div></div>
+<div class="modal fade" id="m3" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content border-0"><div class="modal-header bg-music text-white"><h5>Music & Art Appreciation Plan</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body p-4">透過音樂與藝術欣賞放鬆壓力，提升對系統介面 UI/UX 設計的美感敏銳度。</div></div></div></div>
+<div class="modal fade" id="m4" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content border-0"><div class="modal-header bg-team text-white"><h5>Teamwork & Leadership Plan</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body p-4">積極參與小組專案，學習 Git 版本控制與高效溝通，目標具備領導小型開發團隊的能力。</div></div></div></div>
 
 <footer class="text-center">
 <div class="container">
-<h5 class="mb-4">聯絡我 Contact</h5>
-<p><i class="bi bi-envelope-at"></i> <strong>Gmail:</strong> knhi28012005@gmail.com</p>
-<p><i class="bi bi-geo-alt-fill"></i> 台灣台中市 | 靜宜大學 | 阮慶兒 Julia Nhi</p>
+<h5>聯絡我 Contact</h5>
+<p><i class="bi bi-envelope-at"></i> knhi28012005@gmail.com</p>
+<p><i class="bi bi-geo-alt-fill"></i> Taichung, Taiwan | 靜宜資管 | Julia Nhi</p>
 <hr class="bg-light mx-auto w-25 mt-4">
-<p class="small opacity-50 mt-3">© 2026 來自越南的 MIS 夢想家 | Bản v3.0 cuối cùng</p>
+<p class="small opacity-50 mt-3">© 2026 Julia Nhi Nguyễn Khánh Nhi | 來自越南的 MIS 夢想家 v2.0</p>
 </div>
 </footer>
 
