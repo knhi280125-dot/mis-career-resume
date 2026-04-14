@@ -23,7 +23,6 @@ border: 8px solid rgba(255,255,255,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.3)
 .interest-bar { cursor: pointer; transition: 0.3s; padding: 15px; border-radius: 10px; margin-bottom: 10px; color: white; font-weight: bold; text-align: center; border: none; width: 100%; }
 .interest-bar:hover { opacity: 0.9; transform: scale(1.02); }
 .bg-novel { background: #d35400; } .bg-taiwan { background: #2980b9; } .bg-music { background: #8e44ad; } .bg-team { background: #27ae60; }
-.skill-tag { background: #e8f0fe; color: #1e3c72; padding: 8px 15px; border-radius: 8px; margin: 5px; display: inline-block; font-weight: 500; }
 footer { background: #1a1a1a; color: white; padding: 60px 0; margin-top: 50px; }
 </style>
 </head>
@@ -35,8 +34,8 @@ footer { background: #1a1a1a; color: white; padding: 60px 0; margin-top: 50px; }
 <div class="navbar-nav ms-auto">
 <a class="nav-link" href="#about">關於我</a>
 <a class="nav-link" href="#personality">性格特質</a>
-<a class="nav-link" href="#mis-section">MIS專案</a>
 <a class="nav-link" href="#interests">生活愛好</a>
+<a class="nav-link" href="#contact">聯絡方式</a>
 </div>
 </div>
 </nav>
@@ -62,8 +61,8 @@ footer { background: #1a1a1a; color: white; padding: 60px 0; margin-top: 50px; }
 <div class="card p-4 p-md-5 border-start border-warning border-5">
 <h3 class="fw-bold mb-4" style="color: #1e3c72;">自我介紹：跨越國界的夢想之路</h3>
 <p class="lead">您好！我是阮慶兒，來自越南。目前就讀於台灣靜宜大學資訊管理學系。</p>
-<p><strong>文學素養：</strong> 在高中時期，我曾獲得<strong>全省文學競賽二等獎</strong>。這段經歷培養了我極高的專注力與細膩的觀察力。對我來說，編寫程式就像是創作小說——每一行代碼都是一個章節，每一個功能都是一個角色，最終交織成一個生動且實用的資訊系統。</p>
-<p><strong>留台願景：</strong> 我非常熱愛台灣多元包容的環境，目前正致力於將專業的 MIS 技術與我對文學的創意結合，目標是在這片土地上實現長期的職業發展。</p>
+<p><strong>文學素養：</strong> 在高中時期，我曾獲得<strong>全省文學競賽二等獎</strong>。這段經歷培養了我極高的專注力與細膩的觀察力。對我來說，編寫程式就像是創作小說——每一行代碼都是一個章節，最終交織成一個實用的資訊系統。</p>
+<p><strong>留台願景：</strong> 我熱愛台灣多元包容的環境，目前致力於將資管專業技術與創意結合，目標是在這片土地上實現長期的職業發展。</p>
 </div>
 </section>
 
@@ -74,25 +73,15 @@ footer { background: #1a1a1a; color: white; padding: 60px 0; margin-top: 50px; }
 <div class="card personality-card p-4 h-100">
 <i class="bi bi-heart-fill personality-icon"></i>
 <h5 class="fw-bold">S (社會型)：溫暖同理</h5>
-<p class="text-muted">我擁有極強的同理心，樂於傾聽與幫助他人。在團隊中，我能敏銳察覺他人需求，營造和諧的合作氛圍並有效連結各種解決方案。</p>
+<p class="text-muted">我擁有極強的同理心，樂於傾聽與幫助他人。在團隊中，我能敏銳察覺他人需求，營造和諧的合作氛圍。</p>
 </div>
 </div>
 <div class="col-md-6">
 <div class="card personality-card p-4 h-100">
 <i class="bi bi-palette-fill personality-icon"></i>
 <h5 class="fw-bold">A (藝術型)：創意無限</h5>
-<p class="text-muted">藝術思維讓我具備豐富的想像力，不喜歡受束縛。我擅長將創意發想應用於數位產品中，讓技術展現溫情的感知美感。</p>
+<p class="text-muted">藝術思維讓我具備豐富的想像力。我擅長將創意發想應用於數位產品中，讓技術展現溫情的感知美感。</p>
 </div>
-</div>
-</div>
-</section>
-
-<section id="mis-section" class="mb-5">
-<div class="card p-4 shadow-sm">
-<h3 class="fw-bold mb-3" style="color: #1e3c72;">我的 MIS 工作分析專案</h3>
-<p class="text-muted small">以下內容直接嵌入自我的專案頁面，以便您快速瀏覽：</p>
-<div class="ratio ratio-16x9 rounded-4 overflow-hidden border">
-<iframe src="https://work1115.vercel.app/generic.html" title="MIS Analysis"></iframe>
 </div>
 </div>
 </section>
@@ -111,12 +100,12 @@ footer { background: #1a1a1a; color: white; padding: 60px 0; margin-top: 50px; }
 </section>
 </div>
 
-<div class="modal fade" id="m1" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header bg-novel text-white"><h5>小說創作與閱讀</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body">計畫在兩年內完成一部以台灣生活為背景的中篇小說，並結合網頁技術製作成電子書。</div></div></div></div>
-<div class="modal fade" id="m2" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header bg-taiwan text-white"><h5>台灣旅遊探索</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body">目標走遍台灣各縣市，並建立個人影像網誌，記錄這片土地的人文風景。</div></div></div></div>
-<div class="modal fade" id="m3" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header bg-music text-white"><h5>音樂藝術涵養</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body">提升對 UI/UX 設計的美感度，將藝術與科技完美融合，設計出更人性化的介面。</div></div></div></div>
-<div class="modal fade" id="m4" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header bg-team text-white"><h5>團隊協作與溝通</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body">積極參與跨領域專案，學習如何引導團隊溝通並運用技術解決實際業務問題。</div></div></div></div>
+<div class="modal fade" id="m1" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header bg-novel text-white"><h5>小說創作與閱讀</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body">計畫將文學背景與網頁技術結合，製作個人電子書作品。</div></div></div></div>
+<div class="modal fade" id="m2" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header bg-taiwan text-white"><h5>台灣旅遊探索</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body">目標走遍台灣各縣市，記錄這片土地的人文風景。</div></div></div></div>
+<div class="modal fade" id="m3" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header bg-music text-white"><h5>音樂藝術涵養</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body">提升設計美感，將藝術靈感融入 UI/UX 設計中。</div></div></div></div>
+<div class="modal fade" id="m4" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header bg-team text-white"><h5>團隊協作與溝通</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body">學習如何引導團隊溝通，並運用技術解決實際業務問題。</div></div></div></div>
 
-<footer class="text-center">
+<footer id="contact" class="text-center">
 <div class="container">
 <h5 class="mb-4">聯絡我 Contact</h5>
 <p><i class="bi bi-envelope-heart"></i> Email: knhi28012005@gmail.com</p>
