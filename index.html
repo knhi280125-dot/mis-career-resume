@@ -3,200 +3,163 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nguyễn Khánh Nhi - Portfolio & Career Plan</title>
+<title>Nguyễn Khánh Nhi - Portfolio</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 <style>
-body { background-color: #f4f7f6; font-family: "Microsoft JhengHei", sans-serif; color: #333; scroll-behavior: smooth; }
-
-/* Menu điều hướng tối màu */
-.navbar { background: #1a1a1a !important; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-.navbar-brand { color: #f8f9fa !important; font-weight: bold; }
-.nav-link { color: rgba(255,255,255,0.8) !important; font-size: 0.95rem; margin-left: 10px; }
-.nav-link:hover { color: #fff !important; }
-
-/* Hero section với bố cục có ảnh */
+body { background-color: #f8f9fa; font-family: "Microsoft JhengHei", sans-serif; scroll-behavior: smooth; }
+.navbar { background: #1a1a1a !important; }
 .hero-section {
-background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-color: white;
-padding: 80px 0;
-border-bottom: 5px solid #3498db;
+background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+color: white; padding: 80px 0; border-bottom: 5px solid #f39c12;
 }
-.hero-name { font-size: 3.5rem; font-weight: bold; }
-.hero-title { font-size: 1.3rem; opacity: 0.9; }
 .hero-image {
-width: 250px;
-height: 250px;
-border-radius: 50%;
-object-fit: cover;
-border: 8px solid rgba(255,255,255,0.3);
-box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+width: 220px; height: 220px; border-radius: 50%; object-fit: cover;
+border: 5px solid rgba(255,255,255,0.2); box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
+.card { border: none; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; }
+.section-title { color: #2c3e50; border-left: 5px solid #f39c12; padding-left: 15px; margin-bottom: 20px; font-weight: bold; }
 
-/* Thẻ nội dung */
-.card {
-border: none;
-border-radius: 15px;
-box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-margin-bottom: 30px;
-transition: 0.3s;
-}
-.card:hover { transform: translateY(-5px); }
-.section-title { color: #2c3e50; border-left: 5px solid #3498db; padding-left: 15px; margin-bottom: 20px; font-weight: bold; }
+/* Badges */
+.badge-custom { cursor: pointer; transition: 0.3s; padding: 10px 18px; border-radius: 20px; margin: 5px; display: inline-block; border: none; color: white; }
+.badge-custom:hover { transform: scale(1.1); filter: brightness(1.1); }
+.bg-reading { background: #e67e22; }
+.bg-travel { background: #3498db; }
+.bg-music { background: #9b59b6; }
+.bg-art { background: #e74c3c; }
 
-/* Huy hiệu kỹ năng & sở thích */
-.skill-badge, .interest-badge { color: white; padding: 6px 14px; border-radius: 20px; display: inline-block; margin: 5px; font-size: 0.9em; }
-.skill-badge { background: #3498db; }
-.interest-badge { background: #f39c12; }
-
-/* Liên hệ & Footer */
-.contact-btn { background: white; color: #1e3c72; border-radius: 25px; padding: 10px 25px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-.contact-btn:hover { background: #f8f9fa; color: #1e3c72; }
-
-footer { background: #1a1a1a; color: rgba(255,255,255,0.7); padding: 30px 0; margin-top: 50px; }
-footer p { margin-bottom: 5px; }
-
-ul li { margin-bottom: 8px; }
+footer { background: #1a1a1a; color: white; padding: 40px 0; }
+.modal-header { background: #e67e22; color: white; }
 </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
 <div class="container">
-<a class="navbar-brand" href="#">NGUYỄN KHÁNH NHI</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link" href="#career-plan">Về tôi</a></li>
-<li class="nav-item"><a class="nav-link" href="#projects">Dự án</a></li>
-<li class="nav-item"><a class="nav-link" href="#skills">Kỹ năng & Sở thích</a></li>
-<li class="nav-item"><a class="nav-link" href="#contact">Liên hệ</a></li>
-</ul>
+<a class="navbar-brand fw-bold" href="#">NGUYỄN KHÁNH NHI</a>
+<div class="navbar-nav ms-auto">
+<a class="nav-link" href="#about">Tính cách</a>
+<a class="nav-link" href="#career">Nghề nghiệp</a>
+<a class="nav-link" href="#contact">Liên hệ</a>
 </div>
 </div>
 </nav>
 
-<header class="hero-section" style="margin-top: 60px;">
+<header class="hero-section text-center text-md-start">
 <div class="container">
 <div class="row align-items-center">
-<div class="col-md-8 text-md-start text-center">
-<h1 class="hero-name">阮慶兒</h1>
-<p class="hero-title">Nguyen Khanh Nhi (Julia)</p>
-<p class="hero-title">靜宜大學 資訊管理學系 二年級</p>
-<p class="mt-3" style="font-size: 1.1rem; opacity: 0.8;">"Đam mê xây dựng hệ thống thông tin an toàn, ổn định và tối ưu hóa trải nghiệm người dùng trong doanh nghiệp."</p>
+<div class="col-md-8">
+<h1 class="display-4 fw-bold">阮慶兒</h1>
+<p class="lead">Nguyen Khanh Nhi (Julia)</p>
+<p>靜宜大學 資訊管理學系 二年級</p>
+<div class="mt-4">
+<a href="mailto:knhi28012005@gmail.com" class="btn btn-warning fw-bold rounded-pill px-4">Liên hệ với em</a>
 </div>
-<div class="col-md-4 text-center mt-md-0 mt-4">
-<img src="data:image/png;base64,...(DỮ LIỆU_ẢNH_ĐÃ_MÃ_HÓA_BASE64)..." alt="Nguyễn Khánh Nhi" class="hero-image">
+</div>
+<div class="col-md-4 text-center mt-4 mt-md-0">
+<img src="https://via.placeholder.com/220" alt="Profile" class="hero-image">
 </div>
 </div>
 </div>
 </header>
 
-<div class="container my-5" id="career-plan">
+<div class="container my-5">
 <div class="row">
-<div class="col-md-5">
-<div class="card p-4">
-<h3 class="section-title">📊 職涯測驗結果</h3>
-<p><strong>何倫碼結果：</strong> I (研究型) 、 C (常規型)</p>
-<p>分析：Tôi có khả năng tư duy logic tốt, thích phân tích và giải quyết các bài toán phức tạp. Sự tỉ mỉ trong quản lý dữ liệu giúp tôi phù hợp với các công việc MIS.</p>
-</div>
-
-<div class="card p-4" id="skills">
-<h3 class="section-title">💻 技術能力</h3>
-<div class="skill-badges">
-<span class="skill-badge">Python (Flask)</span>
-<span class="skill-badge">Firebase NoSQL</span>
-<span class="skill-badge">HTML / CSS / Bootstrap</span>
-<span class="skill-badge">Git / GitHub</span>
-<span class="skill-badge">Data Management</span>
-<span class="skill-badge">雲端技術入門 (AWS/Google)</span>
-</div>
+<div class="col-md-6" id="about">
+<div class="card p-4 h-100">
+<h3 class="section-title">🌟 Đặc điểm cá nhân (S x A)</h3>
+<p><strong>Nhóm S (Xã hội) & A (Nghệ thuật):</strong></p>
+<p>Em là người có tâm hồn nhạy cảm, giàu lòng trắc ẩn và luôn thấu hiểu cho người khác. Với sự kết hợp giữa khả năng giao tiếp (S) và tư duy sáng tạo (A), em thích dùng ngôn ngữ, hình ảnh hoặc các giải pháp sáng tạo để kết nối mọi người.</p>
+<hr>
+<p><i class="bi bi-heart-fill text-danger"></i> <strong>Tính cách:</strong> Hòa đồng, thân thiện, sáng tạo, giàu trí tưởng tượng.</p>
 </div>
 </div>
 
-<div class="col-md-7">
-<div class="card p-4">
-<h3 class="section-title">💼 目標工作：MIS 工程師</h3>
-<p><strong>Công việc chính:</strong></p>
-<ul>
-<li><i class="bi bi-patch-check-fill text-primary"></i> <strong>系統維運：</strong>Duy trì hệ thống nội bộ (ERP, CRM) hoạt động ổn định.</li>
-<li><i class="bi bi-patch-check-fill text-primary"></i> <strong>硬體管理：</strong>Quản lý máy chủ, máy tính, thiết bị ngoại vi.</li>
-<li><i class="bi bi-patch-check-fill text-primary"></i> <strong>網路架構：</strong>Giám sát, tối ưu mạng và tường lửa doanh nghiệp.</li>
-<li><i class="bi bi-patch-check-fill text-primary"></i> <strong>數據管理：</strong>Sao lưu và khôi phục dữ liệu định kỳ.</li>
-<li><i class="bi bi-patch-check-fill text-primary"></i> <strong>技術支援：</strong>Hỗ trợ nhân viên khắc phục lỗi phần mềm/phần cứng.</li>
-<li><i class="bi bi-patch-check-fill text-primary"></i> <strong>權限管理：</strong>Quản lý phân quyền tài khoản nội bộ.</li>
-</ul>
+<div class="col-md-6" id="career">
+<div class="card p-4 h-100">
+<h3 class="section-title">💼 Định hướng nghề nghiệp</h3>
+<p>Dựa trên kết quả Holland Code, các công việc phù hợp nhất với em bao gồm:</p>
+<div class="d-flex flex-wrap">
+<span class="badge bg-secondary m-1 p-2">Văn hóa & Nghệ thuật</span>
+<span class="badge bg-secondary m-1 p-2">Truyền thông Marketing</span>
+<span class="badge bg-secondary m-1 p-2">Giáo dục & Đào tạo</span>
+<span class="badge bg-secondary m-1 p-2">Quản trị nhân sự</span>
+<span class="badge bg-secondary m-1 p-2">Thiết kế UI/UX</span>
 </div>
-
-<div class="card p-4" id="projects">
-<h3 class="section-title">📂 Dự án cá nhân</h3>
-<div class="row">
-<div class="col-md-6 mb-3">
-<div class="border rounded p-3 h-100 bg-white">
-<h6><strong>Web App: Quản lý Giảng viên</strong></h6>
-<p class="text-muted small">Flask | Firebase NoSQL | Responsive Design</p>
-<p>Xây dựng hệ thống quản lý hồ sơ thời gian thực, triển khai trên nền tảng đám mây.</p>
-</div>
-</div>
-<div class="col-md-6 mb-3">
-<div class="border rounded p-3 h-100 bg-white">
-<h6><strong>Personal Portfolio (v2.0)</strong></h6>
-<p class="text-muted small">HTML/CSS | Bootstrap | GitHub Action CI/CD</p>
-<p>Thiết kế và tối ưu trang web cá nhân chuyên nghiệp, tích hợp menu và hình ảnh.</p>
-</div>
-</div>
-</div>
-</div>
-
-<div class="card p-4">
-<h3 class="section-title">🚀 未來規劃</h3>
-<ul>
-<li><i class="bi bi-arrow-right-circle-fill text-primary"></i> <strong>Chuyên sâu FE:</strong> Học framework JS (React/Vue) để trở thành Full-stack.</li>
-<li><i class="bi bi-arrow-right-circle-fill text-primary"></i> <strong>Cloud Architect:</strong> Ôn luyện và thi chứng chỉ **AWS Cloud Practitioner**.</li>
-<li><i class="bi bi-arrow-right-circle-fill text-primary"></i> <strong>An toàn thông tin:</strong> Tăng cường kiến thức về资安法規 và phòng thủ hệ thống.</li>
-<li><i class="bi bi-arrow-right-circle-fill text-primary"></i> <strong>Thực tập:</strong> Tìm kiếm cơ hội thực tập MIS/Dev tại các doanh nghiệp.</li>
-</ul>
+<p class="mt-3 small text-muted">*Kết hợp kiến thức MIS để quản trị các hệ thống sáng tạo và con người.</p>
 </div>
 </div>
 </div>
 
 <div class="row mt-4">
-<div class="col-12">
-<div class="card p-4">
-<div class="row align-items-center">
-<div class="col-md-6 text-center border-end">
-<h3 class="section-title justify-content-center border-0 mb-3">🌟 Kỹ năng bổ trợ & Sở thích</h3>
-<div class="interest-badges">
-<span class="interest-badge">Reading 📖</span>
-<span class="interest-badge">Traveling ✈️</span>
-<span class="interest-badge">Programming 💻</span>
-<span class="interest-badge">Language Learning 💬</span>
-<span class="interest-badge">UI/UX Design 🎨</span>
-<span class="interest-badge">Team Collaboration 🤝</span>
+<div class="col-12 text-center">
+<div class="card p-5">
+<h3 class="mb-4">✨ Kỹ năng bổ trợ & Sở thích</h3>
+<p class="text-muted mb-4">(Ấn vào mục "Reading" để xem lộ trình học tập của em)</p>
+<div class="d-flex justify-content-center flex-wrap">
+<div class="badge-custom bg-reading" data-bs-toggle="modal" data-bs-target="#studyModal">
+Reading 📖
 </div>
-</div>
-<div class="col-md-6 text-center mt-md-0 mt-4" id="contact">
-<h3 class="section-title border-0 mb-3">Contact Information</h3>
-<a href="mailto:s111xxxx@gm.pu.edu.tw" class="contact-btn">Email (s111xxxx@gm.pu.edu.tw)</a><br>
-<a href="https://github.com/nhi-github" target="_blank" class="contact-btn">GitHub Profile</a><br>
-<a href="#" class="contact-btn">LinkedIn (Coming Soon)</a>
-</div>
+<div class="badge-custom bg-travel">Traveling ✈️</div>
+<div class="badge-custom bg-music">Music 🎵</div>
+<div class="badge-custom bg-art">Creative Art 🎨</div>
+<div class="badge-custom bg-info">Teamwork 🤝</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 
-<footer class="text-center">
+<div class="modal fade" id="studyModal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">📅 Kế hoạch học tập trong 2 năm tới</h5>
+<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body p-4">
+<table class="table table-bordered">
+<thead class="table-light">
+<tr>
+<th>Giai đoạn</th>
+<th>Mục tiêu trọng tâm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="fw-bold">Năm 2 (Hiện tại)</td>
+<td>Củng cố kiến thức Python, Flask và Firebase. Hoàn thành tốt các đồ án trên lớp.</td>
+</tr>
+<tr>
+<td class="fw-bold">Hè 2026</td>
+<td>Tìm kiếm thực tập tại các công ty IT/Truyền thông tại Đài Trung. Thi chứng chỉ AWS Cloud.</td>
+</tr>
+<tr>
+<td class="fw-bold">Năm 3</td>
+<td>Học chuyên sâu về UI/UX Design để kết hợp với tư duy Nghệ thuật (A). Nâng cao tiếng Trung chuyên ngành.</td>
+</tr>
+<tr>
+<td class="fw-bold">Năm 4</td>
+<td>Thực hiện đồ án tốt nghiệp liên quan đến hệ thống quản lý nhân sự hoặc giáo dục. Chuẩn bị CV ứng tuyển chính thức.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="text-center" id="contact">
 <div class="container">
-<p>© 2026 Nguyễn Khánh Nhi (Julia) | 阮慶兒</p>
-<p>靜宜資管系二年級 | 職涯發展個人網頁作業 v2.0</p>
+<h5>Liên hệ với Nhi</h5>
+<p><i class="bi bi-envelope-at"></i> <strong>Email:</strong> knhi28012005@gmail.com</p>
+<p><i class="bi bi-geo-alt"></i> Taichung, Taiwan | 靜宜大學</p>
+<hr class="bg-light mx-auto w-50">
+<p class="small opacity-75">© 2026 Nguyễn Khánh Nhi (Julia) | Bản cập nhật v3.0</p>
 </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 </body>
 </html>
-   
+
